@@ -129,7 +129,15 @@ Currently, there are no pre-built CPU wheels.
 
 ### Pre-built images
 
-Currently, there are no pre-build CPU images.
+```console
+$ docker run -it \
+             --rm \
+             --network=host \
+             --cpuset-cpus=<cpu-id-list, optional> \
+             --cpuset-mems=<memory-node, optional> \
+             intel/vllm:latest
+```
+
 
 ### Build image from source
 
